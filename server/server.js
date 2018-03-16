@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.post('/todos', (req, res) => {
-  console.log(req.body);
+  console.log(req.body.completed);
 })
 
 app.listen(port, () => {
