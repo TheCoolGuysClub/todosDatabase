@@ -39,4 +39,47 @@ MongoClient.connect(url,(err,client)=>{
   .catch(err=>{
     console.log('unable to write to Mongodb',err);
   })
-})
+  //find
+  // db.collection('Users').find({
+  //   _id: new ObjectId("5aa981cae7e6ce0b8c0a17f9")
+  // }).toArray()
+  //
+  // .then(response=>{
+  //     console.log(JSON.stringify(response,undefined,2));
+  // })
+  // .catch(err=>{
+  //   console.log('unable to fetch from mongodb');
+  // })
+
+  // update
+  //updateOne
+  //updateMany
+  //   db.collection('Users').findOneAndUpdate({
+  //     name: "DaVe"
+  //   },
+  //   {
+  //     $set: {name: "Badboy"}
+  //   },
+  //   {
+  //     returnOriginal: false
+  //   }
+  // )
+  // .then(response =>
+  //   {console.log(JSON.stringify(response.value, undefined, 2));
+  //   })
+  //   .catch(err => {
+  //     console.log('unable to update user');
+  //   })
+
+  // //deleting
+  // db.collection('Users').findOneAndDelete({
+  //   _id: ObjectId("5aa986549f480e0c79fb312e")
+  // })
+  //   .then(response => {
+  //     console.log(JSON.stringify(response, undefined, 2));
+  //   }, err => {
+  //     console.log('unable to delete user');
+  //   })
+
+    client.close();
+  })
