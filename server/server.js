@@ -8,6 +8,12 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+
+// app.use((req, res, next) => {
+//   req.body = {};
+//   next();
+// })
+
 app.post('/todos', (req, res) => {
   console.log(req.body.completed);
 })
@@ -16,7 +22,7 @@ app.listen(port, () => {
   console.log(`listening on port ${port}`);
 })
 
-//
+
 // const todoSchema = mongoose.Schema({
 //   //schema is an object
 //   text: {
@@ -38,8 +44,8 @@ app.listen(port, () => {
 //     last: String
 //   }
 // })
-//
-// //basically making a new class
+
+//basically making a new class
 // const Todo = mongoose.model('Todo', todoSchema);
 //
 // const todo = new Todo({
