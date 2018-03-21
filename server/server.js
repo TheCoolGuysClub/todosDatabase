@@ -46,22 +46,22 @@ app.listen(port, () => {
   console.log(`listening on port ${port}`);
 })
 
-Chrome:
-/todos/123/Jeremy?school=paly
-Route:
-/todos/:id/:name
-rec.params.id; => '123'
-rec.params.name; => 'Jeremy'
-rec.query.school; => 'paly'
-
------------------------------
-
-Chrome:
-/todos?school=paly&num=5
-Route:
-/todos
-rec.query.school; => 'paly'
-rec.query.num; => '5'
+// Chrome:
+// /todos/123/Jeremy?school=paly
+// Route:
+// /todos/:id/:name
+// rec.params.id; => '123'
+// rec.params.name; => 'Jeremy'
+// rec.query.school; => 'paly'
+//
+// -----------------------------
+//
+// Chrome:
+// /todos?school=paly&num=5
+// Route:
+// /todos
+// rec.query.school; => 'paly'
+// rec.query.num; => '5'
 
 
 // const todoSchema = mongoose.Schema({
